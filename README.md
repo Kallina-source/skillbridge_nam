@@ -1,4 +1,4 @@
-# skillbridge_nam
+# skillbridge
 A digital gig and freelance marketplace for Namibian students and youth.
 
 SkillBridge
