@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">SkillBridge</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Find Gigs</a></li>
+            <li><a href="#">Post a Gig</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <p>Join SkillBridge and start your journey today!</p>
+
+        <form>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email" required>
+                </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm your password" required>
+            </div>
+            <div class="form-group">
+                <label>I am a </label>
+                <select required>
+                    <option value="">Select account type</option>
+                    <option value="freelancer">Student/Youth</option>
+                    <option value="client">Employer</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+</body>
+</html>
