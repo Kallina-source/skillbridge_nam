@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* HERO */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 80px 30px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #1a1a2e;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #1a1a2e;
+    transition: all 0.3s ease;
+}
+
+.hero-buttons a:first-child {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.hero-buttons a:last-child {
+   background-color: #1a1a2e;
+    color: #fff;
+}
+
+.hero-buttons a:first-child:hover {
+    background-color: #f0a500;
+    border-color: #f0a500;
+}
+
+.hero-buttons a:last-child:hover {
+    background-color: #f0a500;
+    border-color: #f0a500;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+    padding: 60px 30px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    color: #1a1a2e;
+}
+
+.step p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
