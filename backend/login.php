@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['user_name'] = $user['full_name'];
         $_SESSION['user_type'] = $user['user_type'];
 
-header("Location: http://localhost/skillbridge_nam/frontend/pages/dashboard.html");        exit();
+header("Location: http://localhost/skillbridge_nam/frontend/pages/dashboard.php");        exit();
     } else {
         die("Invalid email or password.");
     }

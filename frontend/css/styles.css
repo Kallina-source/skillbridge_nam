@@ -261,3 +261,39 @@ footer {
 .login-container button:hover {
     background-color: #f0a500;
 }
+
+/* DASHBOARD */
+.dashboard-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.dashboard-container h2 {
+    font-size: 32px;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.dashboard-container p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.welcome-banner {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.welcome-banner h2 {
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.welcome-banner p {
+    color: #ccc;
+}
