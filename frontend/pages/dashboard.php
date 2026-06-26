@@ -20,8 +20,8 @@ if (!isset($_SESSION['user_id'])) {
         <div class="logo">SkillBridge</div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Find Gigs</a></li>
-            <li><a href="#">Post a Gig</a></li>
+            <li><a href="gigs.php">Find Gigs</a></li>
+            <li><a href="post-gig.php">Post a Gig</a></li>
             <li><a href="../../backend/logout.php">Logout</a></li>
         </ul>
     </nav>

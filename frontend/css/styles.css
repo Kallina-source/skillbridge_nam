@@ -297,3 +297,137 @@ footer {
 .welcome-banner p {
     color: #ccc;
 }
+
+/* POST GIG PAGE */
+.post-gig-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+.post-gig-container h2 {
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+.post-gig-container p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.post-gig-container textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+}
+
+.post-gig-container textarea:focus {
+    border-color: #1a1a2e;
+    outline: none;
+}
+
+.post-gig-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a2e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.post-gig-container button:hover {
+    background-color: #f0a500;
+}
+
+/* GIgs Page */
+.gigs-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.gigs-container h2 {
+    color: #1a1a2e;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.gigs-container p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.gig-card {
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gig-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.gig-category {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.gig-card h3 {
+    color: #1a1a2e;
+    margin: 15px 0 10px;
+}
+
+.gig-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.gig-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a1a2e;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #f0a500;
+}
+
+.no-gigs {
+    color: #555;
+    font-size: 16px;
+}
+
