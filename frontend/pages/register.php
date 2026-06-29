@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +11,11 @@
     <nav>
         <div class="logo">SkillBridge</div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Find Gigs</a></li>
-            <li><a href="#">Post a Gig</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="gigs.php">Find Gigs</a></li>
+            <li><a href="post-gig.php">Post a Gig</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
         </ul>
     </nav>
 
@@ -49,7 +50,7 @@
             </div>
             <button type="submit" class="btn">Create Account</button>
         </form>
-        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <p>Already have an account? <a href="login.php">Login here</a></p>
     </div>
 </body>
 </html>

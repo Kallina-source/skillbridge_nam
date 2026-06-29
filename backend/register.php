@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$full_name, $email, $hashed_password, $user_type]);
 
-    header("Location: ../frontend/pages/login.html");
+    header("Location: ../frontend/pages/login.php");
     exit();
 }
 ?>

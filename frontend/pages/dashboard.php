@@ -3,7 +3,7 @@ session_start();
 
 // If not logged in, redirect to login
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -19,15 +19,15 @@ if (!isset($_SESSION['user_id'])) {
     <nav>
         <div class="logo">SkillBridge</div>
         <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="gigs.php">Find Gigs</a></li>
     <li><a href="post-gig.php">Post a Gig</a></li>
     <?php if(isset($_SESSION['user_id'])): ?>
         <li><a href="dashboard.php">Dashboard</a></li>
         <li><a href="../../backend/logout.php">Logout</a></li>
     <?php else: ?>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
     <?php endif; ?>
 </ul>
     </nav>

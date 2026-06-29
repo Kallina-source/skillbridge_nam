@@ -4,7 +4,7 @@ require 'db.php';
 
 // Only logged in users can post gigs
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../frontend/pages/login.html");
+    header("Location: ../frontend/pages/login.php");
     exit();
 }
 
