@@ -48,9 +48,9 @@ $gigs = $stmt->fetchAll();
                         <h3><?php echo $gig['title']; ?></h3>
                         <p><?php echo substr($gig['description'], 0, 100) . '...'; ?></p>
                         <div class="gig-meta">
-                            <span>📍 <?php echo $gig['location']; ?></span>
-                            <span>💰 <?php echo $gig['pay']; ?></span>
-                            <span>⏱ <?php echo $gig['duration']; ?></span>
+                            <span> <?php echo $gig['location']; ?></span>
+                            <span> <?php echo $gig['pay']; ?></span>
+                            <span> <?php echo $gig['duration']; ?></span>
                         </div>
                         <a href="gig-detail.php?id=<?php echo $gig['id']; ?>" class="apply-btn">View & Apply</a>
                     </div>
