@@ -39,6 +39,43 @@ if (!isset($_SESSION['user_id'])) {
         <p>You are logged in as a <?php echo $_SESSION['user_type']; ?>. Start exploring gigs or update your profile.</p>
     </div>
 
+    <!-- QUICK STATS -->
+<div class="dashboard-stats">
+    <?php if($_SESSION['user_type'] == 'student'): ?>
+        <?php
+        $count = $pdo->prepare("SELECT COUNT(*) FROM applications WHERE student_id = ?");
+        $count->execute([$_SESSION['user_id']]);
+        $total_applications = $count->fetchColumn();
+        ?>
+        <div class="stat-card">
+            <h4><?php echo $total_applications; ?></h4>
+            <p>Gigs Applied</p>
+        </div>
+        <div class="stat-card">
+            <a href="gigs.php">Browse Gigs</a>
+        </div>
+        <div class="stat-card">
+            <a href="profile.php">Edit Profile</a>
+        </div>
+    <?php elseif($_SESSION['user_type'] == 'employer'): ?>
+        <?php
+        $count = $pdo->prepare("SELECT COUNT(*) FROM gigs WHERE employer_id = ?");
+        $count->execute([$_SESSION['user_id']]);
+        $total_gigs = $count->fetchColumn();
+        ?>
+        <div class="stat-card">
+            <h4><?php echo $total_gigs; ?></h4>
+            <p>Gigs Posted</p>
+        </div>
+        <div class="stat-card">
+            <a href="post-gig.php">Post a Gig</a>
+        </div>
+        <div class="stat-card">
+            <a href="profile.php">Edit Profile</a>
+        </div>
+    <?php endif; ?>
+</div>
+
     <?php if($_SESSION['user_type'] == 'student'): ?>
     
     <!-- STUDENT DASHBOARD -->
