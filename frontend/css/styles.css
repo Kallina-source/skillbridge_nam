@@ -512,3 +512,74 @@ footer {
     font-weight: bold;
     font-size: 16px;
 }
+
+/* DASHBOARD SECTIONS */
+.dashboard-section {
+    margin-top: 30px;
+}
+
+.dashboard-section h3 {
+    color: #1a1a2e;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h4 {
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.dashboard-card p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.accepted {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status-badge.open {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.closed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.empty-msg {
+    color: #555;
+    font-size: 15px;
+}
+
+.empty-msg a {
+    color: #1a1a2e;
+    font-weight: bold;
+}

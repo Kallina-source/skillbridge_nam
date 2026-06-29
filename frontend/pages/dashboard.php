@@ -1,5 +1,6 @@
 <?php
 session_start();
+require '../../backend/db.php';
 
 // If not logged in, redirect to login
 if (!isset($_SESSION['user_id'])) {
@@ -37,6 +38,62 @@ if (!isset($_SESSION['user_id'])) {
         <h2>Welcome back, <?php echo $_SESSION['user_name']; ?>!</h2>
         <p>You are logged in as a <?php echo $_SESSION['user_type']; ?>. Start exploring gigs or update your profile.</p>
     </div>
+
+    <?php if($_SESSION['user_type'] == 'student'): ?>
+    
+    <!-- STUDENT DASHBOARD -->
+    <div class="dashboard-section">
+        <h3>My Applications</h3>
+        <?php
+        $sql = "SELECT applications.*, gigs.title, gigs.location, gigs.pay 
+                FROM applications 
+                JOIN gigs ON applications.gig_id = gigs.id 
+                WHERE applications.student_id = ?
+                ORDER BY applications.applied_at DESC";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$_SESSION['user_id']]);
+        $applications = $stmt->fetchAll();
+        ?>
+
+        <?php if(count($applications) > 0): ?>
+            <?php foreach($applications as $app): ?>
+                <div class="dashboard-card">
+                    <h4><?php echo $app['title']; ?></h4>
+                    <p>Location: <?php echo $app['location']; ?> | Pay: <?php echo $app['pay']; ?></p>
+                    <span class="status-badge <?php echo $app['status']; ?>"><?php echo ucfirst($app['status']); ?></span>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="empty-msg">You have not applied for any gigs yet. <a href="gigs.php">Browse Gigs</a></p>
+        <?php endif; ?>
+    </div>
+
+    <?php elseif($_SESSION['user_type'] == 'employer'): ?>
+
+    <!-- EMPLOYER DASHBOARD -->
+    <div class="dashboard-section">
+        <h3>My Posted Gigs</h3>
+        <?php
+        $sql = "SELECT * FROM gigs WHERE employer_id = ? ORDER BY created_at DESC";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$_SESSION['user_id']]);
+        $my_gigs = $stmt->fetchAll();
+        ?>
+
+        <?php if(count($my_gigs) > 0): ?>
+            <?php foreach($my_gigs as $gig): ?>
+                <div class="dashboard-card">
+                    <h4><?php echo $gig['title']; ?></h4>
+                    <p>Location: <?php echo $gig['location']; ?> | Pay: <?php echo $gig['pay']; ?></p>
+                    <span class="status-badge <?php echo $gig['status']; ?>"><?php echo ucfirst($gig['status']); ?></span>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="empty-msg">You have not posted any gigs yet. <a href="post-gig.php">Post a Gig</a></p>
+        <?php endif; ?>
+    </div>
+
+    <?php endif; ?>
 </div>
 </body>
 </html>
