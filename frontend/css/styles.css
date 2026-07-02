@@ -529,6 +529,10 @@ footer {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
 }
 
 .dashboard-card h4 {
@@ -772,4 +776,78 @@ footer {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+}
+
+.view-applicants-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #1a1a2e;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.view-applicants-btn:hover {
+    background-color: #f0a500;
+}
+
+/* APPLICANTS PAGE */
+.applicants-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.applicants-card {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.applicants-card h2 {
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.applicants-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.applicants-card hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.applicant-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.applicant-info h4 {
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.applicant-info p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.applicant-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
 }

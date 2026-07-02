@@ -121,10 +121,11 @@ if (!isset($_SESSION['user_id'])) {
         <?php if(count($my_gigs) > 0): ?>
             <?php foreach($my_gigs as $gig): ?>
                 <div class="dashboard-card">
-                    <h4><?php echo $gig['title']; ?></h4>
-                    <p>Location: <?php echo $gig['location']; ?> | Pay: <?php echo $gig['pay']; ?></p>
-                    <span class="status-badge <?php echo $gig['status']; ?>"><?php echo ucfirst($gig['status']); ?></span>
-                </div>
+    <h4><?php echo $gig['title']; ?></h4>
+    <p>Location: <?php echo $gig['location']; ?> | Pay: <?php echo $gig['pay']; ?></p>
+    <span class="status-badge <?php echo $gig['status']; ?>"><?php echo ucfirst($gig['status']); ?></span>
+    <a href="applicants.php?gig_id=<?php echo $gig['id']; ?>" class="view-applicants-btn">View Applicants</a>
+</div>
             <?php endforeach; ?>
         <?php else: ?>
             <p class="empty-msg">You have not posted any gigs yet. <a href="post-gig.php">Post a Gig</a></p>
