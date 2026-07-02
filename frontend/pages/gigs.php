@@ -32,11 +32,12 @@ $gigs = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillBridge - Find Gigs</title>
-<link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <nav>
-        <div class="logo">SkillBridge</div>
+<div class="logo"><i class="fas fa-briefcase"></i> SkillBridge</div>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="gigs.php">Find Gigs</a></li>
@@ -81,11 +82,11 @@ $gigs = $stmt->fetchAll();
                         <span class="gig-category"><?php echo $gig['category_name']; ?></span>
                         <h3><?php echo $gig['title']; ?></h3>
                         <p><?php echo substr($gig['description'], 0, 100) . '...'; ?></p>
-                        <div class="gig-meta">
-                            <span>Location: <?php echo $gig['location']; ?></span>
-                            <span>Pay: <?php echo $gig['pay']; ?></span>
-                            <span>Duration: <?php echo $gig['duration']; ?></span>
-                        </div>
+                       <div class="gig-meta">
+    <span><i class="fas fa-map-marker-alt"></i> <?php echo $gig['location']; ?></span>
+    <span><i class="fas fa-money-bill-wave"></i> <?php echo $gig['pay']; ?></span>
+    <span><i class="fas fa-clock"></i> <?php echo $gig['duration']; ?></span>
+</div>
                         <a href="gig-detail.php?id=<?php echo $gig['id']; ?>" class="apply-btn">View & Apply</a>
                     </div>
                 <?php endforeach; ?>
