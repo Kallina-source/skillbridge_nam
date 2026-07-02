@@ -50,7 +50,7 @@ if (!$gig) {
     <div class="gig-detail-card">
         <span class="gig-category"><?php echo $gig['category_name']; ?></span>
         <h1><?php echo $gig['title']; ?></h1>
-        
+        <p>Posted by: <a href="view-profile.php?id=<?php echo $gig['employer_id']; ?>">View Employer Profile</a></p>
         <div class="gig-detail-meta">
             <span>Location: <?php echo $gig['location']; ?></span>
             <span>Pay: <?php echo $gig['pay']; ?></span>

@@ -37,6 +37,7 @@ if (!isset($_SESSION['user_id'])) {
     <div class="welcome-banner">
         <h2>Welcome back, <?php echo $_SESSION['user_name']; ?>!</h2>
         <p>You are logged in as a <?php echo $_SESSION['user_type']; ?>. Start exploring gigs or update your profile.</p>
+    <a href="view-profile.php?id=<?php echo $_SESSION['user_id']; ?>" class="view-profile-btn">View My Profile</a>
     </div>
 
     <!-- QUICK STATS -->
